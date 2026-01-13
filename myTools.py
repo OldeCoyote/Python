@@ -35,12 +35,17 @@ def myMusic():
     loop = True
     while loop == True:
         print("Welcome you your music library")
-        userAnswer = input("Show songs: 1 | Add song: 2 | Leave: 3")
+        userAnswer = input("Show songs: 1 | Add song: 2 | Remove song: 3 | Leave: 4")
         if userAnswer == "1":
             print(songs)        
         elif userAnswer == "2":    
             song = input("Name a song: ")
             songs.append(song)
         elif userAnswer == "3":
+            print(songs)
+            remove = input("choose song to remove: ")
+            remove = int(remove)
+            songs.pop(remove)
+        elif userAnswer == "4":
             print("Good bye")
             loop = False
